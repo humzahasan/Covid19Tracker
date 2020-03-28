@@ -2,16 +2,11 @@ import React from 'react'
 
 const Countrycount = ({count,country,cases,todayCases,deaths,todayDeaths,recovered,active,critical}) => {
     
-    var counter = 1;
-    if(counter === 1)
-        count=true
-    else
-        count=false
-
+    
     return (
 
         <div>
-            <table className="table table-hover w-auto">
+            <table className="table table-hover">
                 {count &&<thead>
                     <tr>
                     <th scope="col">Country</th>
@@ -27,7 +22,7 @@ const Countrycount = ({count,country,cases,todayCases,deaths,todayDeaths,recover
                 </thead> }
                 <tbody>
                     <tr>
-                    <td>{count}{country}</td>
+                    <td>{country}</td>
                     <td className="text-primary">{cases}</td>
                     <td className="text-muted"> {todayCases} </td>
                     <td className="text-danger">{deaths}</td>

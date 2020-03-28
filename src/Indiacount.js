@@ -45,7 +45,7 @@ function Indiacount({indiacount}) {
   </div>
   </div>
   <div className="card-footer text-muted">
-    *Data collected from updated source (May be different from goverment declared numbers)
+    *Data collected from worldometer source (May be different from goverment declared numbers)
   </div>
   <br/>
 </div>

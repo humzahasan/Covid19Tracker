@@ -40,7 +40,7 @@ const Totalcount = ({totalcount}) => {
             </div>
             </div>
         </div>
-        <div className="container bg-primary text-white">
+        <div className="container bg-info text-white">
             <p>*Latest update in sync with Worldometer</p>        
         </div>
             
