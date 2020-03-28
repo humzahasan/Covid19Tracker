@@ -29,34 +29,34 @@ const App = () => {
     }, [])
 
   const getTotalcount = async () => {
-    console.log("Global Data")
+    //console.log("Global Data")
     const res = await axios('https://corona.lmao.ninja/all')
     const data = res.data
-    console.log(data)
+    //console.log(data)
     setTotalcount(data)
   }  
 
   const getIndiacount = async () => {
-    console.log("India Data")
+    //console.log("India Data")
     const res = await axios('https://coronavirus-19-api.herokuapp.com/countries/india')
     const data = res.data
-    console.log(res)
+    //console.log(res)
     setIndiacount(data)
   }
 
   const getStatecount = async () => {
-    console.log("State wise data")
+    //console.log("State wise data")
     const res = await axios('https://api.covid19india.org/data.json')
     const data = res.data.statewise.slice(1)
-    console.log(data)
+    //console.log(data)
     setStatecount(data)
   }
 
   const countryCount = async () => {
-    console.log("Country Wise")
+    //console.log("Country Wise")
     const res = await axios('https://coronavirus-19-api.herokuapp.com/countries')
     const data = res.data
-    console.log(data)
+    //console.log(data)
     setCountrycount(data)
   }
 
