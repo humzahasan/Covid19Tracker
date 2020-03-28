@@ -5,7 +5,7 @@ import Totalcount from './Totalcount'
 import Indiacount from './Indiacount'
 import Stateindia from './Stateindia'
 import Countrycount from './Countrycount'
-
+import Footer from './Footer'
 /*
 API USED :
 https://corona.lmao.ninja/v2/jhucsse Country wise data
@@ -110,6 +110,7 @@ const App = () => {
       ))
       } 
       </div>
+      <Footer />
       </div>
   );
 }
