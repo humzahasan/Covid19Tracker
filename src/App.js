@@ -3,6 +3,7 @@ import { BrowserRouter as Router , Switch , Route } from 'react-router-dom'
 import './App.css';
 import axios from 'axios'
 import Navbar from './Navbar'
+import Appeal from './Appeal'
 import Totalcount from './Totalcount'
 import Indiacount from './Indiacount'
 import Stateindia from './Stateindia'
@@ -68,6 +69,8 @@ const App = () => {
     <div className="App">
       <Navbar />
       <br />
+      <Appeal />
+    <br />
       <Switch>
         <Route exact path='/' render={props => (
           <div>

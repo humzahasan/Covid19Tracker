@@ -15,7 +15,7 @@ function Indiacount({indiacount}) {
     </div>
     <div className="col">
     <div className="card-body">
-    <h4 className="card-title text-info">Today Cases</h4>        
+    <h4 className="card-title text-info">New Cases</h4>        
     <p className="card-text font-weight-bold">{indiacount.todayCases}</p>
     </div>
     </div>
@@ -47,7 +47,6 @@ function Indiacount({indiacount}) {
   <div className="card-footer text-muted">
     *Data collected from worldometer source (May be different from goverment declared numbers)
   </div>
-  <br/>
 </div>
 
     )

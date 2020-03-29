@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <footer className="page-footer font-small cyan darken-3">
         <div className="container-fluid bg-info" style={{padding:'0',margin:'0'}}>
-        This website's only present the data from extracted from the websites mentioned. Users are advised to visit the respective website to verify data authenticity. The developer does not claim owning the data or its authenticity
+        <strong>Disclaimer : </strong> This website's only present the data from extracted from the websites mentioned. Users are advised to visit the respective website to verify data authenticity. The developer does not claim owning the data or its authenticity
           </div>
           <div className="container">
         

@@ -11,13 +11,16 @@ const Navbar = () => {
   <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
     <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
       <li className="nav-item active">
-        <Link className="nav-link" to="/">Dashboard<span className="sr-only">(current)</span></Link>
+        <Link className="nav-link font-weight-bold" to="/">Dashboard<span className="sr-only">(current)</span></Link>
       </li>
       <li className="nav-item">
-        <Link className="nav-link" to="/country">Country Wise Count</Link>
+        <Link className="nav-link font-weight-bold" to="/country">Country Wise Count</Link>
       </li>
       <li className="nav-item">
-        <Link className="nav-link" to="/govermentlink">Goverment Helplines</Link>
+        <Link className="nav-link font-weight-bold" to="/govermentlink">Goverment Helplines</Link>
+      </li>
+      <li className="nav-item ">
+        <Link className="nav-link font-weight-bold" to="/faq">FAQ</Link>
       </li>
     </ul>
     
