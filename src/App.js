@@ -1,6 +1,7 @@
 import React , {useState , useEffect, Fragment} from 'react';
 import { BrowserRouter as Router , Switch , Route } from 'react-router-dom'
 import './App.css';
+import ReactGA from 'react-ga'
 import axios from 'axios'
 import Navbar from './Navbar'
 import Appeal from './Appeal'
@@ -27,6 +28,8 @@ const App = () => {
   const [loading, setLoading] = useState(false)
 
   useEffect(() => {
+    ReactGA.initialize('UA-162107662-1')
+    ReactGA.pageview('/')
     getTotalcount();
     getIndiacount();
     getStatecount();
