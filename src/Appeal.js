@@ -21,7 +21,7 @@ const Appeal = () => {
             <div className="card border-0 mx-auto" >
                 <div className="card-body">
                     <h4 className="card-title text-info">An Appeal</h4>        
-                    <p className="card-text text-left font-weight-bold">An Appeal to all the people of the world to stay safe, stay indoor and co-operate with the governing body in order to fight this global pandemic.</p>    
+                    <p className="card-text text-left ">An Appeal to all the people of the world to stay safe, stay indoor and co-operate with the governing body in order to fight this global pandemic.</p>    
                 </div>
             </div>
             </div>
@@ -29,7 +29,7 @@ const Appeal = () => {
             <div className="card border-0 mx-auto" style={{width:"18rem"}}>
                 <div className="card-body">
                     <h4 className="card-title text-success">Thank You</h4>        
-                    <p className="card-text text-left font-weight-bold">A special word of thanks to all the people in the healthcare and emergency services who are doing their part to help us overcome this pandemic.</p>    
+                    <p className="card-text text-left ">A special word of thanks to all the people in the healthcare and emergency services who are doing their part to help us overcome this pandemic.</p>    
                 </div>
             </div>
             </div>
@@ -37,7 +37,7 @@ const Appeal = () => {
             <div className="card border-0 mx-auto" >
                 <div className="card-body">
                     <h4 className="card-title text-primary">Help Nation fight back</h4>        
-                    <p className="card-text text-left font-weight-bold">Do your part by donating for the <a href="https://www.pmindia.gov.in/en/?query#">PM CARES Fund</a>. We can all join hands and fight this together.</p>    
+                    <p className="card-text text-left ">Do your part by donating for the <a href="https://www.pmindia.gov.in/en/?query#">PM CARES Fund</a>. We can all join hands and fight this together.</p>    
                 </div>
             </div>
             </div>
