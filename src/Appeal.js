@@ -39,7 +39,7 @@ const Appeal = () => {
     
   </div>
 </div>
-<p className="bg-success">{precaution[num]}</p>    
+<p className="bg-success font-weight-bold ">{precaution[num]}</p>    
         </div>
     )
 }
