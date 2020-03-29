@@ -2,8 +2,14 @@ import React from 'react'
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
 import Accordion from 'react-bootstrap/Accordion'
-const Stateindia = ({name,active,confirmed,deaths,recovered,lastupdate}) => {
-    return (
+import Spinner from './Spinner'
+const Stateindia = ({name,active,confirmed,deaths,recovered,lastupdate,loading}) => {
+    
+  if(loading) return (
+    <Spinner />
+  )
+
+  return (
       <Accordion>
   <Card>
     <Card.Header>

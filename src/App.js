@@ -24,6 +24,8 @@ const App = () => {
   const [countrycount, setCountrycount] = useState([])
   const [indiacount , setIndiacount] = useState([{}])
   const [statecount , setStatecount] = useState([])
+  const [loading, setLoading] = useState(false)
+
   useEffect(() => {
     getTotalcount();
     getIndiacount();
@@ -33,35 +35,43 @@ const App = () => {
     }, [])
 
   const getTotalcount = async () => {
+    setLoading(true)
     //console.log("Global Data")
     const res = await axios('https://corona.lmao.ninja/all')
     const data = res.data
     //console.log(data)
     setTotalcount(data)
+    setLoading(false)
   }  
 
   const getIndiacount = async () => {
+    setLoading(true)
     //console.log("India Data")
     const res = await axios('https://coronavirus-19-api.herokuapp.com/countries/india')
     const data = res.data
     //console.log(res)
     setIndiacount(data)
+    setLoading(false)
   }
 
   const getStatecount = async () => {
     //console.log("State wise data")
+    setLoading(true)
     const res = await axios('https://api.covid19india.org/data.json')
     const data = res.data.statewise.slice(1)
     //console.log(data)
     setStatecount(data)
+    setLoading(false)
   }
 
   const countryCount = async () => {
+    setLoading(true)
     //console.log("Country Wise")
     const res = await axios('https://coronavirus-19-api.herokuapp.com/countries')
     const data = res.data
     //console.log(data)
     setCountrycount(data)
+    setLoading(false)
   }
 
   return (
@@ -74,8 +84,8 @@ const App = () => {
       <Switch>
         <Route exact path='/' render={props => (
           <div>
-            <Totalcount totalcount={totalcount}/>
-      <Indiacount indiacount={indiacount} />
+            <Totalcount totalcount={totalcount} loading={loading}/>
+      <Indiacount indiacount={indiacount} loading={loading}/>
       
       <div>
       <h4>Indian State-wise Tracker </h4>
@@ -84,6 +94,7 @@ const App = () => {
       </div>
       { statecount.map(states => (
       <Stateindia 
+        loading={loading}
         key={states.state}
         name={states.state}
         active={states.active}
@@ -103,6 +114,7 @@ const App = () => {
         <h5> Global Data </h5>
       {countrycount.map(country => (
         <Countrycount 
+          loading={loading}
           key={country.country}
           count='true'
           country={country.country} 

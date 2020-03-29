@@ -1,7 +1,12 @@
 import React from 'react'
+import Spinner from './Spinner'
 
-function Indiacount({indiacount}) {
-    return (
+function Indiacount({indiacount,loading}) {
+
+  if(loading) return (
+    <Spinner />
+  )
+  return (
         <div className="card text-center">
   <div className="card-header">
     <h5>INDIA COVID-19 TRACKER</h5>

@@ -1,6 +1,11 @@
 import React from 'react'
+import Spinner from './Spinner'
+const Totalcount = ({totalcount,loading}) => {
+    
+    if(loading) return (
+        <Spinner />
+    ) 
 
-const Totalcount = ({totalcount}) => {
     return (
         <div className="container-fluid">
             

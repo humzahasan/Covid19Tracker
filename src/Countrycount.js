@@ -1,8 +1,12 @@
 import React from 'react'
+import Spinner from './Spinner'
 
-const Countrycount = ({count,country,cases,todayCases,deaths,todayDeaths,recovered,active,critical}) => {
+const Countrycount = ({count,country,cases,todayCases,deaths,todayDeaths,recovered,active,critical, loading}) => {
     
-    
+    if(loading) return (
+        <Spinner />
+    )
+
     return (
 
         <div>
