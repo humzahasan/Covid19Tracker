@@ -25,6 +25,7 @@ const Stateindia = ({name,active,confirmed,deaths,recovered,lastupdate,loading})
               <p className="card-text text-danger font-weight-bold">Deaths : {deaths}</p>
               <p className="card-text text-success font-weight-bold">Recovered : {recovered}</p>
               <p className="card-footer text-muted">Last Update : {lastupdate}</p>
+              <p>#District wise data to be included soon</p>
       </Card.Body>
     </Accordion.Collapse>
   </Card>
