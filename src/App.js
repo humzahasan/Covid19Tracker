@@ -7,6 +7,7 @@ import Totalcount from './Totalcount'
 import Indiacount from './Indiacount'
 import Stateindia from './Stateindia'
 import Countrycount from './Countrycount'
+import Govermentlink from './Govermentlink'
 import Footer from './Footer'
 /*
 API USED :
@@ -69,11 +70,11 @@ const App = () => {
       <br />
       <Switch>
         <Route exact path='/' render={props => (
-          <Fragment>
+          <div>
             <Totalcount totalcount={totalcount}/>
       <Indiacount indiacount={indiacount} />
       
-      <Fragment>
+      <div>
       <h4>Indian State-wise Tracker </h4>
       <div className="container bg-info text-white">
             <p>*Data in sync with details from Indian state press releases, official government links and reputable news channels as source. Also verified by group of volunteers.</p>        
@@ -90,13 +91,12 @@ const App = () => {
       />
       ))
        }
-       </Fragment>
-      
-          </Fragment>
+       </div>
+       </div>
         )} />
         <Route exact path="/country" render={ props => (
           <Fragment>
-            <Fragment className="container">
+            <Fragment >
         <h5> Global Data </h5>
       {countrycount.map(country => (
         <Countrycount 
@@ -116,6 +116,7 @@ const App = () => {
       </Fragment>
           </Fragment>
         )} />
+        <Route exact path='/govermentlink' component={Govermentlink}/>
       </Switch>
        
       
