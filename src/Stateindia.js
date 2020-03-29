@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
 import Accordion from 'react-bootstrap/Accordion'
 import Spinner from './Spinner'
+import NumberFormat from 'react-number-format'
 const Stateindia = ({name,active,confirmed,deaths,recovered,lastupdate,loading}) => {
     
   if(loading) return (
@@ -14,12 +15,12 @@ const Stateindia = ({name,active,confirmed,deaths,recovered,lastupdate,loading})
   <Card>
     <Card.Header>
       <Accordion.Toggle as={Button} variant="link" eventKey="0">
-        {name} : {confirmed}  
+      <i class="fas fa-arrow-down"></i> {name} : {confirmed}   
       </Accordion.Toggle>
     </Card.Header>
     <Accordion.Collapse eventKey="0">
       <Card.Body>
-              <p className="card-text text-info font-weight-bold">Confimed Cases : {confirmed}</p>
+              <p className="card-text text-info font-weight-bold">Confimed Cases : <NumberFormat value={confirmed} displayType={'text'} thousandSeparator={true} /></p>
               <p className="card-text text-primary font-weight-bold">Active Cases : {active}</p>
               <p className="card-text text-danger font-weight-bold">Deaths : {deaths}</p>
               <p className="card-text text-success font-weight-bold">Recovered : {recovered}</p>
@@ -30,6 +31,8 @@ const Stateindia = ({name,active,confirmed,deaths,recovered,lastupdate,loading})
 </Accordion>
     )
 }
+
+
 
 export default Stateindia
 

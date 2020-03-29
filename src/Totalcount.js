@@ -1,5 +1,6 @@
 import React from 'react'
 import Spinner from './Spinner'
+import NumberFormat from 'react-number-format';
 const Totalcount = ({totalcount,loading}) => {
     
     if(loading) return (
@@ -14,7 +15,7 @@ const Totalcount = ({totalcount,loading}) => {
             <div className="card border-primary mx-auto" style={{width:"15rem", height:"6rem"}}>
                 <div className="card-body">
                     <h4 className="card-title text-primary">Total Cases</h4>        
-                    <p className="card-text font-weight-bold">{totalcount.cases}+</p>    
+                    <p className="card-text font-weight-bold"><NumberFormat value={totalcount.cases} displayType={'text'} thousandSeparator={true} /></p>    
                 </div>
             </div>
             </div>
@@ -22,7 +23,7 @@ const Totalcount = ({totalcount,loading}) => {
             <div className="card border-danger mx-auto" style={{width:"15rem", height:"6rem"}}>
                 <div className="card-body">
                     <h4 className="card-title text-danger">Total Deaths</h4>        
-                    <p className="card-text font-weight-bold">{totalcount.deaths}+</p>    
+                    <p className="card-text font-weight-bold"><NumberFormat value={totalcount.deaths} displayType={'text'} thousandSeparator={true} /></p>    
                 </div>
             </div>
             </div>
@@ -31,7 +32,7 @@ const Totalcount = ({totalcount,loading}) => {
             
                 <div className="card-body">
                     <h4 className="card-title text-success ">Total Recovered</h4>        
-                    <p className="card-text font-weight-bold">{totalcount.recovered}+</p>    
+                    <p className="card-text font-weight-bold"><NumberFormat value={totalcount.recovered} displayType={'text'} thousandSeparator={true} /></p>    
                 </div>
             </div>
             </div>
@@ -40,7 +41,7 @@ const Totalcount = ({totalcount,loading}) => {
                 
                 <div className="card-body">
                     <h4 className="card-title text-warning">Total Active</h4>        
-                    <p className="card-text font-weight-bold">{totalcount.active}+</p>    
+                    <p className="card-text font-weight-bold"><NumberFormat value={totalcount.active} displayType={'text'} thousandSeparator={true} /></p>    
                 </div>
             </div>
             </div>

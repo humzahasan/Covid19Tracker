@@ -1,6 +1,6 @@
 import React from 'react'
 import Spinner from './Spinner'
-
+import NumberFormat from 'react-number-format'
 function Indiacount({indiacount,loading}) {
 
   if(loading) return (
@@ -15,7 +15,7 @@ function Indiacount({indiacount,loading}) {
       <div className="col">
   <div className="card-body">
     <h4 className="card-title text-primary">Total Cases</h4>        
-    <p className="card-text font-weight-bold">{indiacount.cases}</p>
+    <p className="card-text font-weight-bold"><NumberFormat value={indiacount.cases} displayType={'text'} thousandSeparator={true} /></p>
     </div>
     </div>
     <div className="col">
