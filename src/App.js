@@ -79,12 +79,13 @@ const App = () => {
     <div className="App">
       <Navbar />
       <br />
-      <Appeal />
+      
     <br />
       <Switch>
         <Route exact path='/' render={props => (
           <div>
             <Totalcount totalcount={totalcount} loading={loading}/>
+            <Appeal />
       <Indiacount indiacount={indiacount} loading={loading}/>
       
       <div>
