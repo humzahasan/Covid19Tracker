@@ -21,7 +21,7 @@ const Appeal = () => {
             <div className="card border-0 mx-auto" >
                 <div className="card-body">
                     <h4 className="card-title text-info">An Appeal</h4>        
-                    <p className="card-text text-left ">An Appeal to all the people of the world to stay safe, stay indoor and co-operate with the governing body in order to fight this global pandemic.</p>    
+                    <p className="card-text text-left ">An Appeal to all the people around the world to stay safe, stay indoor and co-operate with the governing body in order to fight this global pandemic.</p>    
                 </div>
             </div>
             </div>
