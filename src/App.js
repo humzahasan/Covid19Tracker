@@ -1,6 +1,8 @@
 import React , {useState , useEffect, Fragment} from 'react';
+import { BrowserRouter as Router , Switch , Route } from 'react-router-dom'
 import './App.css';
 import axios from 'axios'
+import Navbar from './Navbar'
 import Totalcount from './Totalcount'
 import Indiacount from './Indiacount'
 import Stateindia from './Stateindia'
@@ -61,23 +63,21 @@ const App = () => {
   }
 
   return (
+    <Router>
     <div className="App">
-      <div className="container bg-light">
-        <h4 className="text-danger">COVID-19 Global Counter</h4>
-      <Totalcount totalcount={totalcount}/>
-      </div>
+      <Navbar />
       <br />
-      
+      <Switch>
+        <Route exact path='/' render={props => (
+          <Fragment>
+            <Totalcount totalcount={totalcount}/>
       <Indiacount indiacount={indiacount} />
       
       <Fragment>
-
-      
       <h4>Indian State-wise Tracker </h4>
       <div className="container bg-info text-white">
             <p>*Data in sync with details from Indian state press releases, official government links and reputable news channels as source. Also verified by group of volunteers.</p>        
       </div>
-      
       { statecount.map(states => (
       <Stateindia 
         key={states.state}
@@ -88,11 +88,15 @@ const App = () => {
         recovered={states.recovered}
         lastupdate={states.lastupdatedtime}
       />
-      
       ))
        }
        </Fragment>
-      <div className="container">
+      
+          </Fragment>
+        )} />
+        <Route exact path="/country" render={ props => (
+          <Fragment>
+            <Fragment className="container">
         <h5> Global Data </h5>
       {countrycount.map(country => (
         <Countrycount 
@@ -109,9 +113,15 @@ const App = () => {
         />
       ))
       } 
-      </div>
+      </Fragment>
+          </Fragment>
+        )} />
+      </Switch>
+       
+      
       <Footer />
       </div>
+      </Router>
   );
 }
 

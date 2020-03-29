@@ -7,7 +7,7 @@ const Countrycount = ({count,country,cases,todayCases,deaths,todayDeaths,recover
 
         <div>
             <table className="table table-hover">
-                {count &&<thead>
+                <thead>
                     <tr>
                     <th scope="col">Country</th>
                     <th scope="col">Cases</th>
@@ -19,7 +19,8 @@ const Countrycount = ({count,country,cases,todayCases,deaths,todayDeaths,recover
                     <th scope="col">Critical</th>
                     
                     </tr>
-                </thead> }
+                </thead>
+        
                 <tbody>
                     <tr>
                     <td>{country}</td>
