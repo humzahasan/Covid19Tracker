@@ -31,10 +31,10 @@ const App = () => {
     ReactGA.initialize('UA-162107662-1')
     ReactGA.pageview('/')
     getTotalcount();
-    getIndiacount();
+    //getIndiacount();
     getStatecount();
     countryCount();
-
+    newAPI()
     }, [])
 
   const getTotalcount = async () => {
@@ -47,7 +47,7 @@ const App = () => {
     setLoading(false)
   }  
 
-  const getIndiacount = async () => {
+  /*const getIndiacount = async () => {
     setLoading(true)
     //console.log("India Data")
     const res = await axios('https://coronavirus-19-api.herokuapp.com/countries/india')
@@ -55,7 +55,7 @@ const App = () => {
     //console.log(res)
     setIndiacount(data)
     setLoading(false)
-  }
+  }*/
 
   const getStatecount = async () => {
     //console.log("State wise data")
@@ -74,6 +74,15 @@ const App = () => {
     const data = res.data
     //console.log(data)
     setCountrycount(data)
+    setLoading(false)
+  }
+
+  const newAPI = async () => {
+    setLoading(true)
+    const res = await axios('https://api.covid19india.org/data.json')
+    console.log(res.data.statewise[0])
+    const data = res.data.statewise[0]
+    setIndiacount(data)
     setLoading(false)
   }
 

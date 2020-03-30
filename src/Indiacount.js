@@ -15,13 +15,7 @@ function Indiacount({indiacount,loading}) {
       <div className="col">
   <div className="card-body">
     <h4 className="card-title text-primary">Total Cases</h4>        
-    <p className="card-text font-weight-bold"><NumberFormat value={indiacount.cases} displayType={'text'} thousandSeparator={true} /></p>
-    </div>
-    </div>
-    <div className="col">
-    <div className="card-body">
-    <h4 className="card-title text-info">New Cases</h4>        
-    <p className="card-text font-weight-bold">{indiacount.todayCases}</p>
+    <p className="card-text font-weight-bold"><NumberFormat value={indiacount.confirmed} displayType={'text'} thousandSeparator={true} /></p>
     </div>
     </div>
     <div className="col">
@@ -42,15 +36,10 @@ function Indiacount({indiacount,loading}) {
     <p className="card-text font-weight-bold">{indiacount.active}</p>
     </div>
     </div>
-    <div className="col">
-    <div className="card-body">
-    <h4 className="card-title text-warning">Critical Cases</h4>        
-    <p className="card-text font-weight-bold">{indiacount.critical || 0}</p>
-    </div>
-  </div>
+    
   </div>
   <div className="card-footer text-muted">
-    *Data collected from worldometer source (May be different from goverment declared numbers)
+    *Data collected from Covid19 API source (May be different from goverment declared numbers).
   </div>
 </div>
 

@@ -15,7 +15,7 @@ const Stateindia = ({name,active,confirmed,deaths,recovered,lastupdate,loading})
   <Card>
     <Card.Header>
       <Accordion.Toggle as={Button} variant="link" eventKey="0">
-      <i class="fas fa-arrow-down"></i> {name} : {confirmed}   
+      <i className="fas fa-arrow-down"></i> {name} : {confirmed}   
       </Accordion.Toggle>
     </Card.Header>
     <Accordion.Collapse eventKey="0">
